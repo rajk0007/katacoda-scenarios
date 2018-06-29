@@ -1,0 +1,32 @@
+{
+  "title": "Kubernetes Basic Concepts",
+  "description": "Learn about Kubernetes basic concepts: Pods, namespaces, daemonsets, jobs, initcontainer..",
+  "difficulty": "Beginner",
+  "time": "10-15 minutes",
+  "details": {
+    "steps": [
+      { "title": "Step 1 - Create contino namespace", "text": "step1.md"},
+      { "title": "Step 2 - Deploy frontend pod in contino namespace", "text": "step2.md"},
+      { "title": "Step 3 - Configure label, port and docker image", "text": "step3.md"}
+    ],
+    "intro": {
+      "text": "intro.md",
+      "code": "set-env.sh"
+    },
+    "finish": {
+      "text": "finish.md"
+    },
+    "assets": {
+      "host01": [{"file": "*", "target": "/root"}]
+    }
+  },
+  "environment": {
+    "icon": "fa-kubernetes",
+    "uisettings": "yaml",
+    "uilayout": "editor-terminal",
+    "uimessage1": "\u001b[32mYour Interactive Bash Terminal.\r\nStart Kubernetes using `launch.sh`\u001b[m\r\n"
+  },
+  "backend": {
+    "imageid": "kubernetes"
+  }
+}
