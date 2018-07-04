@@ -1,14 +1,11 @@
 {
-  "title": "Pods",
-  "description": "Manage Pods, labels and Namespaces",
+  "title": "Volumes",
+  "description": "Manage Volumes",
   "difficulty": "beginner",
   "time": "5 minutes",
   "details": {
     "steps": [
-      { "title": "Deploy frontend pod in contino namespace", "text": "pod-yaml.md"},
-      { "title": "Create contino namespace", "text": "namespaces.md"},
-      { "title": "Configure label, port and docker image", "text": "pod-port-label.md"},
-      { "title": "Pod Node Selector", "text": "pod-nodeselector.md"}
+      { "title": "Create a Daemon Set", "text": "volumes.md"}
     ],
     "intro": {
       "text": "intro.md",

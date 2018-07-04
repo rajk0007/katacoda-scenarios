@@ -36,9 +36,9 @@ spec:
   - name: nginx
     image: nginx
     ports:
-        - name: web
-          containerPort: 80
-          protocol: TCP
+    - name: web
+      containerPort: 80
+      protocol: TCP
 ```
 
 **To deploy it run the folllowing command:** 
@@ -49,4 +49,4 @@ spec:
 
 **Describe frontend pod up:**
 
-`kubectl describe pod frontend-pod --namespace contino`{{execute}}
+`kubectl describe pod frontend-pod2 --namespace contino`{{execute}}

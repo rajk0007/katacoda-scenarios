@@ -9,7 +9,6 @@ apiVersion: v1
 kind: Pod
 metadata:
   name: frontend-pod
-  namespace: contino
 spec:
   containers:
   - name: nginx
@@ -25,4 +24,4 @@ spec:
 
 **List pods up:**
 
-`kubectl get pods --namespace contino`{{execute}}
+`kubectl get pods`{{execute}}

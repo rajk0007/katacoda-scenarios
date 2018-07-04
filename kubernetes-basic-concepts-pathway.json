@@ -1,12 +1,22 @@
 {
     "title": "Kubernetes Basic Concepts",
     "icon": "fa-kubernetes",
-    "description": "Learn how to use Kubernetes basic concepts: Pods, namespaces, daemonsets, jobs, init-container....",
+    "description": "Learn how to use Kubernetes basic concepts",
     "courses": [  
       {
         "course_id": "pods",
         "title": "Pods",
-        "description": "Introduction to Pods, Namespaces, DaemonSets and etc"
+        "description": "Introduction to Pods and Namespaces"
+      },
+      {
+        "course_id": "jobs-initcontainers-staticpods",
+        "title": "Jobs, Init Containers and Static Pods",
+        "description": "Introduction to Jobs, Init Containers and Static Pods"
+      },
+      {
+        "course_id": "daemonset",
+        "title": "DaemonSet",
+        "description": "Introduction to DaemonSet"
       }
      ]
 }
