@@ -1,7 +1,7 @@
 {
-  "title": "Kubernetes Basic Concepts",
+  "title": "K8s Pods",
   "description": "Learn about Kubernetes basic concepts: Pods, namespaces, daemonsets, jobs, initcontainer..",
-  "difficulty": "Beginner",
+  "difficulty": "beginner",
   "time": "10-15 minutes",
   "details": {
     "steps": [
@@ -15,14 +15,9 @@
     },
     "finish": {
       "text": "finish.md"
-    },
-    "assets": {
-      "host01": [{"file": "*", "target": "/root"}]
     }
   },
   "environment": {
-    "icon": "fa-kubernetes",
-    "uisettings": "yaml",
     "uilayout": "editor-terminal",
     "uimessage1": "\u001b[32mYour Interactive Bash Terminal.\r\nStart Kubernetes using `launch.sh`\u001b[m\r\n"
   },
