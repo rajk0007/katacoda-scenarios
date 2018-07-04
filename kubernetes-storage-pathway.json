@@ -1,0 +1,17 @@
+{
+    "title": "Kubernetes Storage",
+    "icon": "fa-kubernetes",
+    "description": "Learn how to use Kubernetes Storage",
+    "courses": [  
+      {
+        "course_id": "configmaps-secrets",
+        "title": "ConfigMaps and Secrets",
+        "description": "Introduction to ConfigMaps and Secrets"
+      },
+      {
+        "course_id": "volumes",
+        "title": "Volumes",
+        "description": "Introduction to Volumes"
+      }
+     ]
+}

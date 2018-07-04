@@ -1,14 +1,13 @@
 {
-  "title": "Pods",
-  "description": "Manage Pods, labels and Namespaces",
+  "title": "Jobs, Init Containers and Static Pods",
+  "description": "Manage Jobs, Init Containers and Static Pods",
   "difficulty": "beginner",
   "time": "5 minutes",
   "details": {
     "steps": [
-      { "title": "Deploy frontend pod in contino namespace", "text": "pod-yaml.md"},
-      { "title": "Create contino namespace", "text": "namespaces.md"},
-      { "title": "Configure label, port and docker image", "text": "pod-port-label.md"},
-      { "title": "Pod Node Selector", "text": "pod-nodeselector.md"}
+      { "title": "Jobs", "text": "jobs.md"},
+      { "title": "Init Container", "text": "initcontainer.md"},
+      { "title": "Static Pod", "text": "static-pod.md"}
     ],
     "intro": {
       "text": "intro.md",
