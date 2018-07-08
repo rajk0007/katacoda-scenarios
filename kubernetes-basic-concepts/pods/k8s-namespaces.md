@@ -1,4 +1,4 @@
-**Namespaces** isolates pods to separate workloads from each other and give you the capability of setting up resource constrainsts on it. It could fit with environment segregation.
+**Namespaces** isolates pods to separate workloads from each other and it gives you the capability of setting up resource constrainsts on it. It could fit with environment segregation.
 
 
 ## Discover Kubernetes namespaces 
@@ -9,7 +9,7 @@ Let's take a look at the initial Kubernetes namespaces:
 
 We can see three namespaces as follows:
 
-<p style="text-align:center;"><img src="/andresguisado/courses/kubernetes-basic-concepts/pods/assets/namespaces.png" alt="Namespaces"></p>
+<p style="text-align:center;"><img src="/contino/courses/kubernetes-basic-concepts/pods/assets/namespaces.png" alt="Namespaces"></p>
 
 
 ### kube-system

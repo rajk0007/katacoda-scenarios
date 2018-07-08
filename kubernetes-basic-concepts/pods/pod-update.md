@@ -3,7 +3,7 @@ We are going to update our happypanda pod running in **dev-service1** namespace 
 Look at the file `/pod-update.yaml`{{open}}:
 
 1. Pods labels has been added in the metadata section
-2. Container image has been updated in the containers section 
+2. Container image has been updated in the containers section. Notice that you can specify image tags if not, latest is used.
 3. Pod ports has been added in the containers section
 
 
@@ -24,7 +24,7 @@ The Pod "happypanda" is invalid: spec: Forbidden: pod updates may not change fie
 
 Ok, let's review the [Kubernetes API Reference](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.10/#container-v1-core) and we can find the following statement in containers ports specification:
 
-<p style="text-align:center;"><img src="/andresguisado/courses/kubernetes-basic-concepts/pods/assets/ports.png" alt="Ports"></p>
+<p style="text-align:center;"><img src="/contino/courses/kubernetes-basic-concepts/pods/assets/ports.png" alt="Ports"></p>
 
 
 In Kubernetes, there're some fields can't be updated. Kubernetes API Reference is helping you out to know the API restrictions and the exact object specification which are available.
@@ -50,3 +50,12 @@ Our happypanda pod is now running with labels, port specification and a new cont
 
 `kubectl get pod -n dev-service1`{{execute}}
 
+### Clean up
+
+Delete pod:
+
+`kubectl delete pod happypanda -n dev-service1`{{execute}}
+
+Delete namespace:
+
+`kubectl delete namespace dev-service1`{{execute}}
