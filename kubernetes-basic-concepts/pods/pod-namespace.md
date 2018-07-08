@@ -4,7 +4,7 @@ Notice that happy panda pod has been configured to be scheduled in **dev-service
 
 Let's apply this yaml file:
 
-`kubectl apply -f pod-namespace.yaml`{{execute}}
+`kubectl apply -f /pods-manifests/pod-namespace.yaml`{{execute}}
 
 ## Validation
 

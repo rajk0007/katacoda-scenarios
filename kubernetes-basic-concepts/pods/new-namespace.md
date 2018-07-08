@@ -10,7 +10,7 @@ Look at the file `test-namespace.yaml`{{open}}
 
 Create test namespace:
 
-`kubectl apply -f test-namespace.yaml`{{execute}}
+`kubectl apply -f /pods-manifests/test-namespace.yaml`{{execute}}
 
 List namespaces up:
 
@@ -20,7 +20,7 @@ List namespaces up:
 
 To delete a namespace there are two options, we can use a yaml file or a single command:
 
-`kubectl delete -f test-namespace.yaml`{{execute}}
+`kubectl delete -f /pods-manifests/test-namespace.yaml`{{execute}}
 
  or 
  
