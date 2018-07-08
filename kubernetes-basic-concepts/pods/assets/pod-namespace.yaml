@@ -1,8 +1,8 @@
 apiVersion: v1
 kind: Pod
 metadata:
-  name: frontend-pod
-  namespace: contino
+  name: happypanda
+  namespace: dev-service1
 spec:
   containers:
   - name: nginx
