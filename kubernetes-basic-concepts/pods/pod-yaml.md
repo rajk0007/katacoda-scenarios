@@ -24,7 +24,7 @@ The pod name is ```happypanda``` and it deploys a nginx container image from doc
 
 By using the ```kubectl``` cli tool, we authenticate to the Kubernetes API and apply our Pod specification to the Kubernetes Cluster:
 
-`kubectl apply -f pod.yaml`{{execute}}
+`kubectl apply -f /pods-manifests/pod.yaml`{{execute}}
 
 ## Validation
 
@@ -38,7 +38,7 @@ Notice that happypanda pod is running on the default namespace since we didn't s
 
 We can delete Pods by using a yaml file or a single command:
 
-`kubectl delete -f pod.yaml`{{execute}}
+`kubectl delete -f /pods-manifests/pod.yaml`{{execute}}
 
 or 
 

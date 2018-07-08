@@ -40,7 +40,7 @@ Delete the pod:
 
 Apply the yaml file:
 
-`kubectl apply -f pod-update.yaml`{{execute}}
+`kubectl apply -f /pods-manifests/pod-update.yaml`{{execute}}
 
 Check it out:
 
