@@ -1,13 +1,12 @@
 **Namespaces** isolates pods to separate workloads from each other and it gives you the capability of setting up resource constrainsts on it. It could fit with environment segregation.
 
-
 ## Discover Kubernetes namespaces 
 
 Let's take a look at the initial Kubernetes namespaces:
 
 `kubectl get namespace`{{execute}}
 
-We can see three namespaces as follows:
+By default, Kubernetes comes with three namespaces. We can see them here:
 
 <p style="text-align:center;"><img src="/contino/courses/kubernetes-basic-concepts/pods/assets/namespaces.png" alt="Namespaces"></p>
 
@@ -16,25 +15,30 @@ We can see three namespaces as follows:
 
 This namespace has objects created by Kubernetes system:
 
-`clear & kubectl get pods -n kube-system`{{execute}}
+`clear && kubectl get pods -n kube-system`{{execute}}
 
-Those systems are needed to make Kubernetes works, such as controllers and add-ons natively integrated with Kubernetes.
+Pods inside of this namespace are associated with services needed by Kubernetes in order to work. These consist of micro-services such as controllers and add-ons natively integrated with Kubernetes. Usually each cloud provider will run specific implementation pods in this namespace too - so don't worry if the `kube-system` namespace differs between clusters/cloud providers.
 
 ### kube-public
 
-This namespace just contains a configmap which has the [bootstrapping and certificate](https://kubernetes.io/docs/reference/access-authn-authz/bootstrap-tokens/) information of the K8s cluster:
+This namespace has a `ConfigMap` which contains the [bootstrapping and certificate](https://kubernetes.io/docs/reference/access-authn-authz/bootstrap-tokens/) information for the Kubernetes cluster:
 
-`clear & kubectl get pods -n kube-public`{{execute}}
+`clear && kubectl get pods -n kube-public`{{execute}}
 
-You don't see anything running in this namespace but we can see a ```cluster-info``` configmap:
+You won't see anything running in this namespace, but we can see a `cluster-info` ConfigMap:
 
-`clear & kubectl get configmap -n kube-public  cluster-info -o yaml`{{execute}}
+<!-- You don't see anything running in this namespace but we can see a ```cluster-info``` configmap: -->
 
-In addtion, this namespace might be treated as a namespace to run any object which should be visible and readable throughout the whole cluster since it is visible and readable from all parts of the Kubernetes cluster.
+`clear && kubectl get configmap -n kube-public cluster-info -o yaml`{{execute}}
+
+In addition, this namespace might be treated as somewhere used to run an object which should be visible and readable throughout the whole cluster.
 
 ### default
-Kubernetes sets this namespaces out of the box to use it for objects with no other namespace:
 
-`clear & kubectl get pods -n default`{{execute}}
+Kubernetes creates this namespace by default. All objects created without specifying a namespace will automatically be created in the `default` namespace.
 
-It is empty from the beginning and it doesn't have anyting special, except you can't delete it.
+This namespace is empty and doesn't contain any objects:
+
+`clear && kubectl get pods -n default`{{execute}}
+
+One thing to note about the `default` namespace is that it can't be deleted, unlike other namespaces within the Kubernetes cluster.

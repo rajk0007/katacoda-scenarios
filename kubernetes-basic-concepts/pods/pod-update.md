@@ -1,4 +1,4 @@
-We are going to update our happypanda pod running in **dev-service1** namespace and to do that you need to apply ```pod-update.yaml```.
+We are going to update our `happypanda` pod running in **dev-service1** namespace and to do that you need to apply ```pod-update.yaml```.
 
 Look at the file `/pod-update.yaml`{{open}}:
 
@@ -14,7 +14,7 @@ A pod can be updated by applying a yaml file, let's apply our ```pod-update.yaml
 `kubectl apply -f pod-update.yaml`{{execute}}
 
 
-### Didn't it work? What happend?
+### Didn't it work? What happened?
 
 The error we are getting is the following:
 

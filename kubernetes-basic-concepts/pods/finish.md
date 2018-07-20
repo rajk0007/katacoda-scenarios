@@ -1,1 +1,1 @@
-Congratulations!
+Congratulations! You can start the next exercise in this series.

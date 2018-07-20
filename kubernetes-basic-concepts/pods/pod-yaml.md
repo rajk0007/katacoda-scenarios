@@ -1,5 +1,5 @@
 
-To communicate with the Kubernetes API we use a CLI tool called ```kubectl``` but most likely you are going to use YAML files as well in order to create cluster configuration and objects.
+To communicate with the Kubernetes API, we use a CLI tool called ```kubectl``` but most likely you are going to use YAML files as well in order to create cluster configuration and objects.
 
 In this YAML file, we are going to create a Pod specification to tell Kubernetes how to deploy and run it.
 
@@ -17,7 +17,7 @@ Kubernetes API Reference is helping us out to configure Kubernetes objects by ya
 
 Look at the file `pod.yaml`{{open}}
 
-The pod name is ```happypanda``` and it deploys a nginx container image from docker hub public registry.
+The pod name is ```happypanda``` and it deploys a `nginx` container image from Docker Hub public registry.
 
 
 ## Create a Pod
@@ -28,15 +28,15 @@ By using the ```kubectl``` cli tool, we authenticate to the Kubernetes API and a
 
 ## Validation
 
-In order to validate if happypanda pod  is running, we need to ask the Kubernetes API as follows:
+In order to validate if `happypanda` pod is running, we need to ask the Kubernetes API as follows:
 
 `kubectl get pods`{{execute}}
 
-Notice that happypanda pod is running on the default namespace since we didn't set any namespace in our specification.
+Notice that `happypanda` pod is running in the `default` namespace as we didn't set any namespace in our specification.
 
 ## Delete a Pod
 
-We can delete Pods by using a yaml file or a single command:
+We can delete pods by using a YAML file or a single command:
 
 `kubectl delete -f /pods-manifests/pod.yaml`{{execute}}
 
@@ -44,6 +44,6 @@ or
 
 `kubectl delete pod happypanda`{{execute}}
 
-Check happypanda por has been deleted:
+Check `happypanda` pod has been deleted:
 
 `kubectl get pods`{{execute}}
