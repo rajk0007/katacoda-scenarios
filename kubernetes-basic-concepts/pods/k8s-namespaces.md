@@ -27,8 +27,6 @@ This namespace has a `ConfigMap` which contains the [bootstrapping and certifica
 
 You won't see anything running in this namespace, but we can see a `cluster-info` ConfigMap:
 
-<!-- You don't see anything running in this namespace but we can see a ```cluster-info``` configmap: -->
-
 `clear && kubectl get configmap -n kube-public cluster-info -o yaml`{{execute}}
 
 In addition, this namespace might be treated as somewhere used to run an object which should be visible and readable throughout the whole cluster.
