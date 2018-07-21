@@ -36,7 +36,7 @@ In addition, this namespace might be treated as somewhere used to run an object 
 
 ### default
 
-Kubernetes creates this namespace by default. All objects created without specifying a namespace will automatically be created in the `default` namespace.
+All objects created without specifying a namespace will automatically be created in the `default` namespace.
 
 This namespace is empty and doesn't contain any objects:
 
