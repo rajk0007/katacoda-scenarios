@@ -17,7 +17,10 @@ This namespace has objects created by Kubernetes system:
 
 `clear && kubectl get pods -n kube-system`{{execute}}
 
-Pods inside of this namespace are associated with services needed by Kubernetes in order to work. These consist of micro-services such as controllers and add-ons natively integrated with Kubernetes. Usually each cloud provider will run specific implementation pods in this namespace too - so don't worry if the `kube-system` namespace differs between clusters/cloud providers.
+
+Pods inside of this namespace are needed to make Kubernetes works, such as controllers and add-ons natively integrated with Kubernetes which we will talk later on
+
+> **Note:** Usually each cloud provider will run specific implementation pods in this namespace too - so don't worry if the `kube-system` namespace differs between clusters/cloud providers.
 
 ### kube-public
 
