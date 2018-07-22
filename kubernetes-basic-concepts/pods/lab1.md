@@ -11,4 +11,3 @@ Create a ```pod``` with the following constraints:
 5. Set the container with ```8080 port```
 6. Check happyelephant is running successfully
 7. Delete happyelephant pod ( remember set up path: /pods-manifests/)
-
