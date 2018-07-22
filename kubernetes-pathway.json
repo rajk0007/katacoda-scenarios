@@ -1,0 +1,47 @@
+{
+    "title": "Kubernetes 101",
+    "icon": "fa-kubernetes",
+    "description": "Learn how to use Kubernetes",
+    "courses": [  
+      {
+        "course_id": "pods",
+        "title": "Pods",
+        "description": "Introduction to Pods and Namespaces"
+      },
+      {
+        "course_id": "assign-pod-nodes",
+        "title": "Assign pods to nodes",
+        "description": "Introduction to Node Selector and Affinity"
+      },
+      {
+        "course_id": "jobs-initcontainers-staticpods",
+        "title": "Jobs, Init Containers and Static Pods",
+        "description": "Introduction to Jobs, Init Containers and Static Pods"
+      },
+      {
+        "course_id": "daemonset",
+        "title": "DaemonSet",
+        "description": "Introduction to DaemonSet"
+      },
+      {
+        "course_id": "basic-deployments",
+        "title": "Basic Deployments",
+        "description": "Introduction to basic deployments"
+      },
+      {
+        "course_id": "advanced-deployments",
+        "title": "Advanced Deployments",
+        "description": "Introduction to advanced deployments"
+      },
+      {
+        "course_id": "configmaps-secrets",
+        "title": "ConfigMaps and Secrets",
+        "description": "Introduction to ConfigMaps and Secrets"
+      },
+      {
+        "course_id": "volumes",
+        "title": "Volumes",
+        "description": "Introduction to Volumes"
+      }
+     ]
+}
