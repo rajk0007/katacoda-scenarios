@@ -18,7 +18,7 @@ Look at the file `pod-hard-affinity.yaml`:
 
 `cat /manifests/pod-hard-affinity.yaml`{{execute}}
 
-<p style="text-align:center;"><img src="/contino/courses/kubernetes/assign-pod-nodes/assets/pod-hard-affinity.png" alt="pod-hard-affinity"></p>
+<p style="text-align:center;"><img src="/andresguisado/courses/kubernetes/assign-pod-nodes/assets/pod-hard-affinity.png" alt="pod-hard-affinity"></p>
 
 This is a `hard pod affinity`. If none of the node has a pod running with label **fruit=apple**, the pod will not be scheduled at all. Here **topologyKey** is a label of a node. This can be any node label.
 

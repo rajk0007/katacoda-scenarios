@@ -1,7 +1,7 @@
 In the previous exercice, we have introduced `nodeSelector`  but using this is a hard condition. If the condition is not met, the pod cannot be shceduled.
 `Node/Pod Affinity and Anti-Affinity` solves this issue by introducing soft and hard conditions.
 
-<p style="text-align:center;"><img src="/contino/courses/kubernetes/assign-pod-nodes/assets/type-affinity-anti-affinity.png" alt="Type_affinity_anti_affinity"></p>
+<p style="text-align:center;"><img src="/andresguisado/courses/kubernetes/assign-pod-nodes/assets/type-affinity-anti-affinity.png" alt="Type_affinity_anti_affinity"></p>
 
 >**Note**: It is a beta feature, we won't run any exercise of it but we will get through the basic concepts, for further info read [Affinity and Anti-Affinity](https://kubernetes.io/docs/concepts/configuration/assign-pod-node/#affinity-and-anti-affinity)
 
@@ -21,7 +21,7 @@ Look at the file `node-soft-affinity.yaml`:
 
 `cat /manifests/node-soft-affinity.yaml`{{execute}}
 
-<p style="text-align:center;"><img src="/contino/courses/kubernetes/assign-pod-nodes/assets/node-soft-affinity.png" alt="node-soft-affinity"></p>
+<p style="text-align:center;"><img src="/andresguisado/courses/kubernetes/assign-pod-nodes/assets/node-soft-affinity.png" alt="node-soft-affinity"></p>
 
 If there are no nodes labeled as apple, the pod would have still be scheduled.
 
@@ -31,7 +31,7 @@ Look at the file `node-soft-affinity.yaml`:
 
 `cat /manifests/node-hard-affinity.yaml`{{execute}}
 
-<p style="text-align:center;"><img src="/contino/courses/kubernetes/assign-pod-nodes/assets/node-hard-affinity.png" alt="node-hard-affinity"></p>
+<p style="text-align:center;"><img src="/andresguisado/courses/kubernetes/assign-pod-nodes/assets/node-hard-affinity.png" alt="node-hard-affinity"></p>
 
 If there are no nodes labeled as apple, the pod won't be scheduled.
 
@@ -41,5 +41,5 @@ Node `anti-affinity` can be achieved by using `NotIn` operator. This will help u
 
 Here is an example:
 
-<p style="text-align:center;"><img src="/contino/courses/kubernetes/assign-pod-nodes/assets/node-anti-affinity.png" alt="node-anti-affinity"></p>
+<p style="text-align:center;"><img src="/andresguisado/courses/kubernetes/assign-pod-nodes/assets/node-anti-affinity.png" alt="node-anti-affinity"></p>
 

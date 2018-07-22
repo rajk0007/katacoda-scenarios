@@ -41,7 +41,7 @@ Check that `happy panda` has been successfully scheduled on node01:
 
 Delete `happy panda` pod:
 
-`kubectl apply -f /manifests/pod-nodeselector.yaml`{{execute}} 
+`kubectl delete -f /manifests/pod-nodeselector.yaml`{{execute}} 
 
 or 
 
