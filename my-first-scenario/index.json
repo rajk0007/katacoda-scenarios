@@ -16,9 +16,9 @@
     }
   },
   "environment": {
-    "uilayout": "terminal"
+    "uilayout": "terminal-terminal"
   },
   "backend": {
-    "imageid": "docker"
+    "imageid": "kubernetes-cluster-running"
   }
 }
