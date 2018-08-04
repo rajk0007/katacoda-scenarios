@@ -1,13 +1,5 @@
- You can manually assign pods to a specific node cluster, it is not necessary as the scheduler is doing that automatically for you but it might be some circumstances where you may want more control on this, e.g. to ensure that a pod ends up on a machine with an SSD attached to it.
+The Kubernetes scheduler automatically assigns pods to nodes, however there are times where you need more control over where the scheduler assigns nodes. For example, you need to schedule a pod to a certain machine that has an SSD attached to it.
 
-There're different ways to achive that, `nodeSelector, Affinity and Anti-Affinity`, and they all use [Labels and Selectors](https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/). 
+There are different ways to achive this, using: `nodeSelector`, `Affinity` and `Anti-Affinity`, which all use [Labels and Selectors](https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/). 
 
-This scenario provides an overall view of how to assign pods to nodes by using `nodeSelector`. The `Affinity and Anti-Affinity` features are still in beta mode thus we will just mention them.
-
-For further info read [Assigning Pods to Nodes](https://kubernetes.io/docs/concepts/configuration/assign-pod-node/).
-
-
-
-
-
-
+In this scenario, we'll be covering how to assign pods to nodes using `nodeSelector`. Although `Affinity` and `Anti-Affinity` can be used, these are both in beta and thus, we will just mention them. For further reading, check out [Assigning Pods to Nodes](https://kubernetes.io/docs/concepts/configuration/assign-pod-node/).
