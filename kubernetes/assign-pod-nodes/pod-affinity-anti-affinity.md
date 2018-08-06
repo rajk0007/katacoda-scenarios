@@ -16,7 +16,8 @@ Let's inspect the `pod-hard-affinity.yaml` file:
 
 `cat /manifests/pod-hard-affinity.yaml`{{execute}}
 
-[pod-hard-affinity](assets/pod-hard-affinity.png)
+<p style="text-align:center;"><img src="/contino/courses/kubernetes/assign-pod-nodes/assets/pod-hard-affinity.png" alt="pod-hard-affinity"></p>
+
 
 This is a `hard pod affinity`. If none of the nodes are labelled with **fruit=apple**, then the pod won't be scheduled.
 
