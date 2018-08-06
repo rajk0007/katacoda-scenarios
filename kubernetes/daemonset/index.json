@@ -1,11 +1,14 @@
 {
-  "title": "Pods",
-  "description": "Manage DaemonSets",
+  "title": "Manage DaemonSets",
+  "description": "Create, manage and manipulate DaemonSets in this scenario.",
   "difficulty": "beginner",
-  "time": "5 minutes",
+  "time": "10-15 minutes",
   "details": {
     "steps": [
-      { "title": "Create a Daemon Set", "text": "daemonset.md"}
+      { "title": "Create a DaemonSet", "text": "create-daemonset.md" },
+      { "title": "Accessing nginx", "text": "accessing-nginx.md" },      
+      { "title": "Updating a DaemonSet (Rolling Update)", "text": "updating-daemonset.md" },
+      { "title": "Deleting a DaemonSet", "text": "deleting-daemonset.md" }
     ],
     "intro": {
       "text": "intro.md",
@@ -15,14 +18,17 @@
       "text": "finish.md"
     },
     "assets": {
-      "host01": [{"file": "*", "target": "/root"}]
+      "host01": [{"file": "*.yaml", "target": "/manifests"}],
+      "host02": [{"file": "*.yaml", "target": "/manifests"}]
     }
   },
   "environment": {
     "uilayout": "terminal-terminal",
-    "uimessage1": "\u001b[32mYour Interactive Bash Terminal.\r\nStart Kubernetes using `launch.sh`\u001b[m\r\n"
+    "uieditorpath": "/manifests",
+    "uimessage1": "\u001b[32mYour Interactive Bash Terminal.\r\nStart Kubernetes using `launch.sh`\u001b[m\r\n",
+    "icon": "fa-kubernetes"
   },
   "backend": {
-    "imageid": "kubernetes-cluster"
+    "imageid": "kubernetes-cluster-running"
   }
 }
