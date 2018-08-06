@@ -1,26 +1,26 @@
-`Node affinity` allows you to schedule pods on selective nodes. But what if you want to run pods along with other pods selectively? **`Pod affinity`** helps us with that.
+`NodeAffinity` allows you to schedule pods on specific nodes. But what if you want to run multiple pods on specific nodes? **`Pod affinity`** helps with that.
 
->**Note**: It is a beta feature, we won't run any exercise of it but we will get through the basic concepts, for further info read [Affinity and Anti-Affinity](https://kubernetes.io/docs/concepts/configuration/assign-pod-node/#affinity-and-anti-affinity)
+>**Note**: As this is a beta feature, we won't be running any of them in this exercise, however it's important to understand the basic concepts. For more information, read the Kubernetes documentation on [Affinity and Anti-Affinity](https://kubernetes.io/docs/concepts/configuration/assign-pod-node/#affinity-and-anti-affinity).
 
 ### Pod Affinity
-Look at the [API Kubernetes Reference](https://v1-10.docs.kubernetes.io/docs/reference/generated/kubernetes-api/v1.10/#podaffinity-v1-core)
 
-The two main `specs` for Pod Afiinity are:
+When you look at the [Kubernetes API Reference](https://v1-10.docs.kubernetes.io/docs/reference/generated/kubernetes-api/v1.10/#podaffinity-v1-core), you'll notice that the two `specs` for Pod Affinity are:
 
-* `spec.affinity.podAffinity.preferredDuringSchedulingIgnoredDuringExecution`is for **Soft Pod Affinity**. If the preferred option is available, the Pod will run there. If not, the Pod can still be sheduled elsewhere. 
+* `spec.affinity.podAffinity.preferredDuringSchedulingIgnoredDuringExecution`is for **Soft Pod Affinity**. If the preferred option is available, the Pod will run there. If not, the Pod can still be scheduled elsewhere. 
 
 * `spec.affinity.podAffinity.requiredDuringSchedulingIgnoredDuringExecution` is for **Hard Pod Affinity**. If the required option is not available, the Pod cannot run.
 
-
 ### Hard Pod Affinity
 
-Look at the file `pod-hard-affinity.yaml`:
+Let's inspect the `pod-hard-affinity.yaml` file:
 
 `cat /manifests/pod-hard-affinity.yaml`{{execute}}
 
-<p style="text-align:center;"><img src="/andresguisado/courses/kubernetes/assign-pod-nodes/assets/pod-hard-affinity.png" alt="pod-hard-affinity"></p>
+[pod-hard-affinity](assets/pod-hard-affinity.png)
 
-This is a `hard pod affinity`. If none of the node has a pod running with label **fruit=apple**, the pod will not be scheduled at all. Here **topologyKey** is a label of a node. This can be any node label.
+This is a `hard pod affinity`. If none of the nodes are labelled with **fruit=apple**, then the pod won't be scheduled.
+
+The **topologyKey** is a label of a node, such as `kubernetes.io/hostname` (as seen in the picture).
 
 ### Soft Pod Affinity
 
@@ -28,10 +28,7 @@ Soft Pod Affinity will schedule the Pod even though is not finding a pod running
 
 ### Pod Anti-Affinity
 
-Look at the [API Kubernetes Reference](https://v1-10.docs.kubernetes.io/docs/reference/generated/kubernetes-api/v1.10/#podantiaffinity-v1-core0)
-
-
-The two main `specs` for Pod Anti-Afiinity are:
+When you look at the [Kubernetes API Reference](https://v1-10.docs.kubernetes.io/docs/reference/generated/kubernetes-api/v1.10/#podantiaffinity-v1-core), you'll notice that the two `specs` for Pod Anti-Affinity are:
 
 * `spec.affinity.podAntiAffinity.preferredDuringSchedulingIgnoredDuringExecution`is for **Soft Pod Anti-Affinity**. If the preferred option is available, the Pod will run there. If not, the Pod can still be sheduled elsewhere. 
 
