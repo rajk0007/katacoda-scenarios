@@ -11,7 +11,7 @@ Look at the file `/pod-update.yaml`{{open}}:
 
 A pod can be updated by applying a yaml file, let's apply our ```pod-update.yaml``` file with the above changes:
 
-`kubectl apply -f pod-update.yaml`{{execute}}
+`kubectl apply -f /pods-manifests/pod-update.yaml`{{execute}}
 
 
 ### Didn't it work? What happened?
