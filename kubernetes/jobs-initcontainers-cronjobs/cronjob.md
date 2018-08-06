@@ -24,7 +24,7 @@ hello     */1 * * * *   False     0         <none>          8s
 
 Watch the job until `LAST-SCHEDULE` column get a value, it means it began to run:
 
-`kubectl get cronjob ---watch`{{execute}}
+`kubectl get cronjob --watch`{{execute}}
 
 Check the cron job again, you should see that the cronjob has been scheduled at the time specified in `LAST-SCHEDULE`:
 
