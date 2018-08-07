@@ -41,7 +41,7 @@ metadata:
 
 The metadata contains the name of the deployment (which must be unique), an internal uid used by Kubernetes, and the annotations object. It contains one annotation, namely that the current deployment revision is 1. Also as seen in other scenarios throughout this course, each object in Kubernetes can have a set of labels, which are key-value pairs.
 
->**Take Away Point:** Label everything!!
+>**Take Away Point:** Label everything!
 
 ### Deployment Object
 
