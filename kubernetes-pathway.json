@@ -14,9 +14,9 @@
         "description": "Introduction to Node Selector and Affinity"
       },
       {
-        "course_id": "jobs-initcontainers-staticpods",
-        "title": "Jobs, Init Containers and Static Pods",
-        "description": "Introduction to Jobs, Init Containers and Static Pods"
+        "course_id": "jobs-initcontainers-cronjobs",
+        "title": "Jobs, Init Containers and Cron Jobs",
+        "description": "Introduction to Jobs, Init Containers and Cron Jobs"
       },
       {
         "course_id": "daemonset",
