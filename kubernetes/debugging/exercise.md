@@ -6,4 +6,4 @@ It also has a broken deployment create from a .yml file:
 
 and a service that won't start:
 
-`cat clusterip-serviceservice.yml;echo`{{execute}}
+`cat clusterip-service.yml;echo`{{execute}}
