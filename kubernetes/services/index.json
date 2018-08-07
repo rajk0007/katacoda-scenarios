@@ -8,7 +8,8 @@
       { "title": "Launch Deployment", "text": "launch-deployment.md" },
       { "title": "ClusterIP Service", "text": "clusterip.md" },
       { "title": "NodePort Service", "text": "nodeport.md" },      
-      { "title": "LoadBalancer Service", "text": "loadbalancer.md" }
+      { "title": "LoadBalancer Service", "text": "loadbalancer.md" },
+      { "title": "Exercise", "text": "exercise.md" }
     ],
     "intro": {
       "text": "intro.md",
