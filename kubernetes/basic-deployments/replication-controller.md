@@ -25,3 +25,9 @@ As you can see, there are now 3 pods, as per the replication controller manifest
 To delete a replication controller:
 
 `kubectl delete rc nginx -n contino`{{execute}}
+
+### Scaling RCs
+
+Scaling RCs is very similar to deployments. Edit the replicas in the manifest and use the `kubectl replace -f` command:
+
+`kubectl replace -f rc-nginx.yaml`{{execute}}
