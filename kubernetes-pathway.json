@@ -47,6 +47,11 @@
         "course_id": "volumes",
         "title": "Volumes",
         "description": "Introduction to Volumes"
+      },
+      {
+        "course_id": "debugging",
+        "title": "Debugging",
+        "description": "Learn debugging"
       }
      ]
 }
