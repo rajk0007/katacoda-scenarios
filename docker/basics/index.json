@@ -1,0 +1,28 @@
+{
+  "title": "Basics",
+  "description": "The Basics of Docker",
+  "difficulty": "beginner",
+  "time": "8-10 minutes",
+  "details": {
+    "steps": [
+      { "title": "Launching a container", "text": "launch-container.md"}
+    ],
+    "intro": {
+      "text": "intro.md",
+      "code": "set-env.sh"
+    },
+    "finish": {
+      "text": "finish.md"
+    },
+    "assets": {
+      "host01": [{"file": "*.yml", "target": "/files"}]
+    }
+  },
+  "environment": {
+    "uilayout": "editor-terminal",
+    "uieditorpath": "/files"
+  },
+  "backend": {
+    "imageid": "docker"
+  }
+}
