@@ -34,6 +34,11 @@
         "description": "Introduction to advanced deployments"
       },
       {
+        "course_id": "services",
+        "title": "Services",
+        "description": "Introduction to services"
+      },
+      {
         "course_id": "configmaps-secrets",
         "title": "ConfigMaps and Secrets",
         "description": "Introduction to ConfigMaps and Secrets"
