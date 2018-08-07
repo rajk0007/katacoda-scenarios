@@ -4,7 +4,7 @@ Because you have already created a deployment earlier called `nginx-deployment`,
 
 Before we create the new deployment, let's inspect the file:
 
-`cat dep-manifest.yaml`{{execute}}
+`cat dep-manifest.yaml; echo`{{execute}}
 
 As you can see, it essentially re-creates the YAML output from the deployment that we created manually in the previous chapter.
 
