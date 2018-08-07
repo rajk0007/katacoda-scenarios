@@ -15,7 +15,7 @@
       "text": "finish.md"
     },
     "assets": {
-      "host01": [{"file": "*.yml", "target": "/files"}]
+      "client": [{"file": "*.yml", "target": "/files"}]
     }
   },
   "environment": {
