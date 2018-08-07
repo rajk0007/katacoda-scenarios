@@ -3,19 +3,19 @@ If you are running on any of the major cloud providers it will be freely availab
 
 Lets make katacoda LoadBalancer friendly:
 
-`kubectl create -f cloudprovider.yml`
+`kubectl create -f cloudprovider.yml`{{execute}}
 
 Once we have that we can create our service:
 
-`kubectl create -f loadbalancer-service.yml`
+`kubectl create -f loadbalancer-service.yml`{{execute}}
 
 We can check if it was created with:
 
-`kubectl get svc -o wide`
+`kubectl get svc -o wide`{{execute}}
 
 or if we want more information:
 
-`kubectl describe svc nginx-service`
+`kubectl describe svc lb-nginx-service`{{execute}}
 
 
 We can now access our service with:
