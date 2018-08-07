@@ -1,5 +1,75 @@
-### High Level View of Deployments
+Kubernetes deployments manage stateless services running in your cluster (as opposed to - for example - StatefulSets, which manage stateful services). Their purpose is to keep a set of identical pods running and upgrade them in a controlled way – performing a rolling update by default. There are different deployment strategies that work with Deployments. They are, however, out of scope of this scenario. For more information on deployment strategies, read the [Kubernetes Documentation here](https://kubernetes.io/docs/concepts/workloads/controllers/deployment/#writing-a-deployment-spec).
 
-Kubernetes deployments manage stateless services running in your cluster (as opposed to, for example StatefulSets, which manage stateful services). Their purpose is to keep a set of identical pods running and upgrade them in a controlled way – performing a rolling update by default. There are different deployment strategies that work with Deployments. They are, however, out of scope of this scenario. For more information on deployment strategies, read the [Kubernetes Documentation](#link).
+![Deployments - High Level Overview (image)](assets/deployment-high-level.png)
 
-![Deployments - High Level Overview](assets/deployment-high-level.png)
+### Creating a Deployment in kubectl
+
+Before we start, you should already have a namespace created called `contino`. If you do not have this namespace yet, or you have deleted it, then please re-create it:
+
+`kubectl create namespace contino`{{execute}}
+
+Create a basic deployment called `nginx-deployment` using the `nginx` image, and expose port 80 in the container:
+
+`kubectl run nginx-deployment -n contino --image=nginx --port 80`{{execute}}
+
+```
+$ kubectl run nginx-deployment -n contino --image=nginx --port 80
+
+deployment "nginx-deployment" created
+```
+
+Now let's inspect the deployment that we've just created:
+
+`kubectl get deployment nginx-deployment -n contino -o yaml`{{execute}}
+
+```
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+ annotations:
+  deployment.kubernetes.io/revision: "1"
+ name: nginx-deployment
+ namespace: contino
+ uid: 2c2a631a-a3188-11e7-c869-42010a8401482
+ labels:
+  run: nginx-deployment
+```
+
+The metadata contains the name of the deployment (which must be unique), an internal uid used by Kubernetes, and the annotations object. It contains one annotation, namely that the current deployment revision is 1. Also as seen in other scenarios throughout this course, each object in Kubernetes can have a set of labels, which are key-value pairs.
+
+>**Take Away Point:** Label everything!!
+
+### Deployment Object
+
+Next, we're going to cover the main deployment object, or `spec`.
+
+```
+spec:
+ replicas: 1
+ strategy:
+   rollingUpdate:
+     maxSurge: 1
+     maxUnavailable: 1
+   type: RollingUpdate
+ template:
+   metadata:
+     labels:
+       run: nginx-deployment
+   spec:
+     containers:
+     - image: nginx
+       name: nginx-deployment
+       ports:
+       - containerPort: 80
+         protocol: TCP
+```
+
+The spec (specification) of the deployment has two keys you must set:
+
+- `replicas`: describes how many pods this deployment should have. In our case, there will be one only one pod created.
+- `template`: describes how each pod should look like. It describes a list of containers that should be in the Pod.
+
+The two other keys can be set to customize the behavior of the deployment.
+
+- `selector`: determines which pods are considered to be part of this deployment. This uses labels to 'select' pods.
+- `strategy`: states how an update to a deployment should be rolled out. See earlier at the start of this chapter for the Kubernetes API link on more information on deployment strategies.
