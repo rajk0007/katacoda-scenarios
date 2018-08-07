@@ -1,0 +1,34 @@
+{
+  "title": "Pods",
+  "description": "Manage Pods, Labels and Namespaces",
+  "difficulty": "beginner",
+  "time": "8-10 minutes",
+  "details": {
+    "steps": [
+      { "title": "Namespaces", "text": "k8s-namespaces.md"},
+      { "title": "Create a new namespace", "text": "new-namespace.md"},
+      { "title": "Create a pod", "text": "pod-yaml.md"},
+      { "title": "Schedule a pod in a namespace", "text": "pod-namespace.md"},
+      { "title": "Updating pod", "text": "pod-update.md"},
+      { "title": "Your own practice", "text": "lab1.md"}
+    ],
+    "intro": {
+      "text": "intro.md",
+      "code": "set-env.sh"
+    },
+    "finish": {
+      "text": "finish.md"
+    },
+    "assets": {
+      "host01": [{"file": "*.yaml", "target": "/pods-manifests"}]
+    }
+  },
+  "environment": {
+    "uilayout": "editor-terminal",
+    "uieditorpath": "/pods-manifests",
+    "uimessage1": "\u001b[32mYour Interactive Bash Terminal.\r\nStart Kubernetes using `launch.sh`\u001b[m\r\n"
+  },
+  "backend": {
+    "imageid": "kubernetes"
+  }
+}
