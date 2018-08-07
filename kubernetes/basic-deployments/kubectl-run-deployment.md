@@ -15,7 +15,7 @@ Create a basic deployment called `nginx-deployment` using the `nginx` image, and
 ```
 $ kubectl run nginx-deployment -n contino --image=nginx --port 80
 
-deployment "nginx-deployment" created
+deployment.apps "nginx-deployment" created
 ```
 
 Now let's inspect the deployment that we've just created:
@@ -26,13 +26,17 @@ Now let's inspect the deployment that we've just created:
 apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
- annotations:
-  deployment.kubernetes.io/revision: "1"
- name: nginx-deployment
- namespace: contino
- uid: 2c2a631a-a3188-11e7-c869-42010a8401482
- labels:
-  run: nginx-deployment
+  annotations:
+    deployment.kubernetes.io/revision: "1"
+  creationTimestamp: 2018-08-07T18:30:51Z
+  generation: 1
+  labels:
+    run: nginx-deployment
+  name: nginx-deployment
+  namespace: contino
+  resourceVersion: "849"
+  selfLink: /apis/extensions/v1beta1/namespaces/contino/deployments/nginx-deployment
+  uid: 035c4414-9a70-11e8-a7a6-0242ac110067
 ```
 
 The metadata contains the name of the deployment (which must be unique), an internal uid used by Kubernetes, and the annotations object. It contains one annotation, namely that the current deployment revision is 1. Also as seen in other scenarios throughout this course, each object in Kubernetes can have a set of labels, which are key-value pairs.
@@ -45,23 +49,30 @@ Next, we're going to cover the main deployment object, or `spec`.
 
 ```
 spec:
- replicas: 1
- strategy:
-   rollingUpdate:
-     maxSurge: 1
-     maxUnavailable: 1
-   type: RollingUpdate
- template:
-   metadata:
-     labels:
-       run: nginx-deployment
-   spec:
-     containers:
-     - image: nginx
-       name: nginx-deployment
-       ports:
-       - containerPort: 80
-         protocol: TCP
+  progressDeadlineSeconds: 600
+  replicas: 1
+  revisionHistoryLimit: 10
+  selector:
+    matchLabels:
+      run: nginx-deployment
+  strategy:
+    rollingUpdate:
+      maxSurge: 1
+      maxUnavailable: 1
+    type: RollingUpdate
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        run: nginx-deployment
+    spec:
+      containers:
+      - image: nginx
+        imagePullPolicy: Always
+        name: nginx-deployment
+        ports:
+        - containerPort: 80
+          protocol: TCP
 ```
 
 The spec (specification) of the deployment has two keys you must set:
