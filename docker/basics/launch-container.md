@@ -2,4 +2,4 @@
 
 To launch a container in docker we specify the following
 
-`docker run nginx`{{execute}}
+`docker run -d nginx`{{execute}}
