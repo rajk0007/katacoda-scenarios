@@ -1,0 +1,12 @@
+{
+    "title": "Docker",
+    "icon": "fa-docker",
+    "description": "Learn how to use Docker",
+    "courses": [  
+      {
+        "course_id": "basics",
+        "title": "Basics",
+        "description": "The Basics of Docker"
+      }
+     ]
+}
