@@ -10,7 +10,7 @@ Look at the replication controller manifest:
 
 Now create the replication controller:
 
-`kubectl create -f rc-nginx.yaml`{{exexute}}
+`kubectl create -f rc-nginx.yaml`{{execute}}
 
 Check for RCs:
 
