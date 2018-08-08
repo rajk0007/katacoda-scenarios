@@ -28,4 +28,4 @@ spec:
           servicePort: 80
 ```
 
-![Ingress Overview (image)](https://katacoda.com/contino/courses/kubernetes/ingress/assets/ingressoverview.png)
+<p style="text-align:center;"><img src="contino/courses/kubernetes/ingress/assets/ingressoverview.png" alt="ingress-overview"></p>
