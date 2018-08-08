@@ -49,6 +49,10 @@
         "description": "Introduction to Volumes"
       },
       {
+        "course_id": "ingress",
+        "title": "ingress",
+        "description": "Introduction to Ingress"
+      },      
         "course_id": "debugging",
         "title": "Debugging",
         "description": "Learn debugging"
