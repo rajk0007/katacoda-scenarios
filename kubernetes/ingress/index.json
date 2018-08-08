@@ -5,10 +5,8 @@
   "time": "10-15 minutes",
   "details": {
     "steps": [
-      { "title": "Ingress Controllers", "text": "ingres-controller.md" },
-      { "title": "Accessing nginx", "text": "accessing-nginx.md" },      
-      { "title": "Updating a DaemonSet (Rolling Update)", "text": "updating-daemonset.md" },
-      { "title": "Deleting a DaemonSet", "text": "deleting-daemonset.md" }
+      { "title": "Ingress Controllers", "text": "ingress-controller.md" },
+      { "title": "Accessing nginx", "text": "accessing-nginx.md" }
     ],
     "intro": {
       "text": "intro.md",
