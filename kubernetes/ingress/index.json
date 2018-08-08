@@ -5,8 +5,7 @@
   "time": "10-15 minutes",
   "details": {
     "steps": [
-      { "title": "Ingress Controllers", "text": "ingress-controller.md" },
-      { "title": "Accessing nginx", "text": "accessing-nginx.md" }
+      { "title": "Ingress Controllers", "text": "ingress-controller.md" }
     ],
     "intro": {
       "text": "intro.md",
