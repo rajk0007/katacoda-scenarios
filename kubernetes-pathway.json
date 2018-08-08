@@ -39,6 +39,11 @@
         "description": "Introduction to services"
       },
       {
+        "course_id": "ingress",
+        "title": "ingress",
+        "description": "Introduction to Ingress"
+      },   
+      {
         "course_id": "configmaps-secrets",
         "title": "ConfigMaps and Secrets",
         "description": "Introduction to ConfigMaps and Secrets"
@@ -48,11 +53,7 @@
         "title": "Volumes",
         "description": "Introduction to Volumes"
       },
-      {
-        "course_id": "ingress",
-        "title": "ingress",
-        "description": "Introduction to Ingress"
-      },      
+       
         "course_id": "debugging",
         "title": "Debugging",
         "description": "Learn debugging"
