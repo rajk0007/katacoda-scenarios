@@ -18,7 +18,7 @@ This namespace has objects created by Kubernetes system:
 
 Pods inside of this namespace are needed to make Kubernetes work, such as controllers and add-ons natively integrated with Kubernetes which we will talk later on.
 
-> **Note:** Usually each cloud provider will run specific implementation pods in this namespace too - so don't worry if the `kube-system` namespace differs between clusters/cloud providers.
+> **Note:** Usually, each cloud provider will run specific implementation pods in this namespace too - so don't worry if the `kube-system` namespace differs between clusters/cloud providers.
 
 ### kube-public
 
