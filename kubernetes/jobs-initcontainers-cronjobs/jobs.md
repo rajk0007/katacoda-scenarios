@@ -1,21 +1,21 @@
-[Jobs resources](https://kubernetes.io/docs/concepts/workloads/controllers/jobs-run-to-completion/) are used to running a batch job, supporting parallel jobs until reach a specific number of completions.
+[Job resources](https://kubernetes.io/docs/concepts/workloads/controllers/jobs-run-to-completion/) are used to facilitate the execution of a batch job. Through Job resources, Kubernetes also supports parallel jobs which will finish executing when a specific number of successful completions is reached.
 
-Therefore with Jobs, we can run a work items such as frames to be rendered, files to be transcoded, ranges of keys in a NoSQL database to scan, and so on.
+Therefore with Job resources, we can run work items such as frames to be rendered, files to be transcoded, ranges of keys in a NoSQL database to scan, and so on.
 
-Take a look at [Jobs Api reference](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.11/#job-v1-batch) to see how to build a job resource in Kubernetes.
+Have a look at [Jobs Api reference](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.18/#job-v1-batch) to see how to build a job resource in Kubernetes.
 
-Pods created by jobs are not deleted. Keeping them around allows you to still view the logs of completed pods to check for errors. If you want to remove them, you need to do that manually.
+Pods created by jobs are not automatically deleted. Keeping the pods around allows you to view the logs of completed jobs in order to check for potential errors. If you want to remove them, you need to do that manually.
 
 ## Create Countdown Job
 
-Look at the file `job.yaml`{{open}}. 
+Take a look at the file `job.yaml`{{open}}. 
 
-This example creates a job which runs a bash command to countdown from 10 to 1.
+This example creates a job which runs a bash command to count down from 10 to 1.
 
-Notice that the field `spec.restartPolicy` just allow two values: "OnFailure" or "Never", for further information read [here](https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle/#example-states)
+Notice that the field `spec.restartPolicy` allow only two values: "OnFailure" or "Never". For further information read [here](https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle/#example-states)
 
-> **Note:** There're situations where you want to fail a job after some ammount of retries, to do so use `spec.backoffLimit`. It is set by default to 6.
-> You could want to manage the duration of the job, not matter how many Pods are created. You can use `spec.activeDeadlineSeconds` and once a Job reaches this value(in sec), the Job and all of its Pods are terminates.
+> **Note:** There are situations where you want to fail a job after a number of retries. To do so, use `spec.backoffLimit` which, by defauly, is set 6.
+> You can use `spec.activeDeadlineSeconds` to limit the execution time in case you want to manage the duration of a specific job. If the execution reaches this deadline, the Job and all of its Pods are terminated.
 
 Create the countdown job:
 
@@ -29,7 +29,7 @@ Check the status of the job:
 
 ### Job Logs
 
-In order to see the job's logs we need to get the job name:
+In order to see the job's logs we need to get the name of the Job in question:
 
 `kubectl get pods -o 'jsonpath={.items[0].metadata.name}'; echo`{{execute}}
 
