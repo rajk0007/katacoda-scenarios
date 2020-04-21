@@ -1,11 +1,11 @@
-[**Pod**](https://kubernetes.io/docs/concepts/workloads/pods/pod/) is the smallest concept we have in Kubernetes. It is not a container. Pods consist of one or more containers.
+[**Pod**](https://kubernetes.io/docs/concepts/workloads/pods/pod/) is the smallest concept we have in Kubernetes and it is not represented by a single container. Pods consist of one or more containers.
 
-[**Namespaces**](https://kubernetes.io/docs/concepts/overview/working-with-objects/namespaces/) - You can think of namespace as a virtual cluster inside of you Kubernetes cluster. You can have multiples namespaces inside of a single Kubernetes cluster and they are isolated from each other. They can help your team with organisation, security and performance. Pods run inside of namespaces.
+You can think of a [**Namespace**](https://kubernetes.io/docs/concepts/overview/working-with-objects/namespaces/) as a virtual cluster inside of your Kubernetes deployment. You can have multiple namespaces inside of a single Kubernetes cluster and each one of them is isolated from each other. As all pods run in a specifc namespace, they can help your team with the organisation, security and performance of your pods.
 
-[**Label**](https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/) is a metadata to identify information. It can be used for queries. It's good practice to use labels as much as possible, as you'll be able to have more granular control over what your pods are doing.
+A [**Label**](https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/) is a key/value pair that is used to provide attributes to objects. It's good practice to leverage labels, as you'll be able to have a more granular control over what your pods are doing. Labes can be used to query specific objects.
 
-**Volume** serves data to the pod.
+A **Volume** serves data to the pod.
 
 <p style="text-align:center;"><img src="/contino/courses/kubernetes/pods/assets/pod.png" alt="Pod"></p>
 
-> **NOTE:** Don’t use naked Pods (that is, Pods not bound to a ReplicaSet or Deployment) if you can avoid it. Naked Pods will not be rescheduled in the event of a node failure. For further information, refer to the Kubernetes [Best Practices](https://kubernetes.io/docs/concepts/configuration/overview/) documentation.
+> **NOTE:** Don’t use naked Pods (that is, Pods not bound to a ReplicaSet or Deployment) if you can avoid it. Naked Pods will not be rescheduled in the event of a node failure. For further information, refer to the Kubernetes [Best Practices](https://kubernetes.io/docs/concepts/configuration/overview/#naked-pods-vs-replicasets-deployments-and-jobs) documentation.
