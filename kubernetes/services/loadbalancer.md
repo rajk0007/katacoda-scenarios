@@ -17,5 +17,6 @@ or if we want more information:
 
 `kubectl describe svc lb-nginx-service`{{execute}}
 
-
 We can now access our service with:
+
+`curl http://<EXTERNAL-IP>`
