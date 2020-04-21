@@ -1,9 +1,9 @@
 
-This scenario provides an overview of Jobs, Init Containers and Cron Jobs in Kubernetes.
+This scenario provides an overview of Jobs, Init Containers and CronJobs in Kubernetes.
 
 [Jobs resources](https://kubernetes.io/docs/concepts/workloads/controllers/jobs-run-to-completion/) create one or more pods and ensures that all of them successfully terminate. 
 
-There're two types of jobs:
+There are two types of jobs:
 
 * **Non-parallel Job:** A Job which creates only one Pod (which is re-created if the Pod terminates unsuccessfully), and which is completed when the Pod terminates successfully.
 * **Parallel jobs with a completion count:** A Job that is completed when a certain number of Pods terminate successfully. You specify the desired number of completions using the completions field. 
@@ -13,7 +13,7 @@ There're two types of jobs:
 [Init Containers](https://kubernetes.io/docs/concepts/workloads/pods/init-containers/) are regular containers within a pod that run before the app container and they also satisfy the following statements:
 
 * They can run setup scripts not present in an app container - e.g prepopulate some data, waiting until a specific service is up and running and etc.
-* A pod can have one or more init containers apart of app containers
-* They always run to completation
+* A pod can have one or more init containers apart from app containers
+* Init containers always run to completation
 * Each one must complete successfully before the next one is started
-* Application container won't run if any init container won't finish successfully
+* The application container won't run if any of the configured init containers will not finish the execution successfully
