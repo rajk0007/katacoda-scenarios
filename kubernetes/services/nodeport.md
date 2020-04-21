@@ -12,5 +12,6 @@ or if we want more information:
 
 `kubectl describe svc nodeport-nginx-service`{{execute}}
 
-
 We can now access our service with:
+
+`curl http://<NODEPORT-IP>`
