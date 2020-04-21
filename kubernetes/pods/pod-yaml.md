@@ -13,8 +13,6 @@ In this exercise, we want to create a Pod and first of all, we are going to chec
 
 Kubernetes API Reference provides us with the necessary information to write the Pod's specification in YAML format. 
 
->**NOTE:** As an interesting fact, Kubernetes API was using [Swagger v.1.2](https://swagger.io/) and [OpenAPI](https://www.openapis.org/) but since Kubernetes v.1.10 Swagger is deprecated and got removed in Kubernetes v.1.14.
-
 Take a look at the file `pod.yaml`{{open}}
 
 The pod name is ```happypanda``` and it deploys an `nginx` container image from Docker Hub's public registry.
