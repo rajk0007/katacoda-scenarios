@@ -1,4 +1,4 @@
-In this scenario, we're going to be creating an `nginx` DaemonSet. Initially, we'll run this on our worker nodes `(node01)`, but then we will manipulate the DaemonSet to get it running on the master node too.
+In this scenario, we're going to create an `nginx` DaemonSet. Initially, we'll run this on our worker nodes `(node01)`, but then we will manipulate the DaemonSet to get it to run on the master node too.
 
 ### nginx DaemonSet
 
