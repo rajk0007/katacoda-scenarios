@@ -1,3 +1,3 @@
+sleep 5
 cd /manifests
-sleep 1
 ls
