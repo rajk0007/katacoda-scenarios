@@ -2,7 +2,7 @@
 
 You can think of a [**Namespace**](https://kubernetes.io/docs/concepts/overview/working-with-objects/namespaces/) as a virtual cluster inside of your Kubernetes deployment. You can have multiple namespaces inside of a single Kubernetes cluster and each one of them is isolated from each other. As all pods run in a specifc namespace, they can help your team with the organisation, security and performance of your pods.
 
-A [**Label**](https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/) is a key/value pair that is used to provide attributes to objects. It's good practice to leverage labels, as you'll be able to have a more granular control over what your pods are doing. Labes can be used to query specific objects.
+A [**Label**](https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/) is a key/value pair that is used to provide attributes to objects. It's good practice to leverage labels, as you'll be able to have a more granular control over what your pods are doing. Labels can be used to query specific objects.
 
 A **Volume** serves data to the pod.
 
