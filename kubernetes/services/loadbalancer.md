@@ -1,5 +1,5 @@
 What if we wanted a single point of entry for our service from the oustide? For that we need a LoadBalancer type of service. 
-If you are running on any of the major cloud providers it will be freely available for your, but if you are on-prem or in this case katacoda then you need to make this functionality available.
+If you are running on any of the major cloud providers it will be freely available for you, but if you are on-prem or in this case katacoda, then you need to make this functionality available.
 
 Lets make katacoda LoadBalancer friendly:
 
