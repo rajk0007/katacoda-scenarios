@@ -20,7 +20,7 @@ This is what manifests need to be tainted with in order to be ran on master node
 
 Now check to see if an additional pod has been created. Remember - a DaemonSet schedules a pod to every node, so there should be two pods created:
 
-`kubectl get po -n contino -l app=nginx`{{execute}}
+`kubectl get po -n contino -l app=nginx -o wide`{{execute}}
 
 If there's two pods - great. That means that the tolerations have worked and we are now running across two nodes.
 
