@@ -14,7 +14,7 @@ Find the line `9` in the manifest, and update it to 10 replicas. `:wq` in `vim` 
 
 Once the deployment has been updated, check the pods:
 
-`kubectl get po -n contino`
+`kubectl get po -n contino`{{execute}}
 
 You should see 10 nginx pods now. You've successfully just scaled your deployment. Equally, to scale down your deployment, simply change the number of replicas and update the deployment again.
 
@@ -24,24 +24,28 @@ RollingUpdate Deployments support running multiple versions of an application at
 
 For example, you are running a Deployment with 10 replicas, maxSurge=3, and maxUnavailable=2.
 
+`kubectl get deployments -n contino`{{execute}}
+
 ```sh
-$ kubectl get deployments -n contino
 NAME                 DESIRED   CURRENT   UP-TO-DATE   AVAILABLE   AGE
 nginx-deployment     10        10        10           10          50s
 ```
 
 You update to a new image which happens to be unresolvable from inside the cluster.
 
+`kubectl set image deploy/nginx-deployment nginx-deployment=nginx:unresolvabletag -n contino`{{execute}}
+
 ```sh
-$ kubectl set image deploy/nginx-deployment nginx=nginx:unresolvabletag -n contino
 deployment "nginx-deployment" image updated
 ```
 
-The image update starts a new rollout with ReplicaSet nginx-deployment-1989198191, but it’s blocked due to the maxUnavailable requirement that we mentioned above.
+The image update starts a new rollout with updated image nginx-deployment, but the rollout is halted due to failing pods and maxUnavailable requirement that we mentioned above.
+
+`kubectl -n contino get pods`{{execute}}
 
 ```sh
-$ kubectl get rs -n contino
 NAME                          DESIRED   CURRENT   READY     AGE
-nginx-deployment-1989198191   5         5         0         9s
-nginx-deployment-618515232    8         8         8         1m
+nginx-deployment-6975c45ccc-rmcj2   0/1     ErrImagePull   0          3m26s
+nginx-deployment-6975c45ccc-v9s6h   0/1     ErrImagePull   0          3m26s
+...
 ```
