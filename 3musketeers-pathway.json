@@ -1,0 +1,26 @@
+{
+  "title": "3musketeers",
+  "description": "Scenarios to introduce the 3musketeers patterns",
+  "courses": [
+      {
+        "course_id": "3musketeers-intro",
+        "title": "3musketeers-intro",
+        "description": "An Intro to the 3musketeers patternss"
+      },
+      {
+        "course_id": "make-docker-compose-env-variables",
+        "title": "make-docker-compose-env-variabless",
+        "description": "Makefile Docker Compose Env Varss"
+      },
+      {
+        "course_id": "convert-python-to-3musketeers",
+        "title": "convert-python-to-3musketeers",
+        "description": "Taking a single python file and implement the 3musketeers patterns"
+      },
+      {
+        "course_id": "java-to-3musketeers",
+        "title": "java-to-3musketeers",
+        "description": "Starting out with a gradle spring boot application and implementing 3muskteers patterns"
+      }
+  ]
+}
