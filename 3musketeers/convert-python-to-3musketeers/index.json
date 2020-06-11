@@ -1,0 +1,69 @@
+{
+  "noindex": true,
+  "title": "convert-python-to-3musketeers",
+  "description": "Taking a single python file and implement the 3musketeers patterns",
+  "difficulty": "Intermediate",
+  "time": "15",
+  "details": {
+    "assets": { 
+      "client": 
+      [
+        {
+          "file": "printvar.py", 
+          "target": "~/"
+        },
+        {
+          "file": "Dockerfile", 
+          "target": "~/"
+        },
+        {
+          "file": "docker-compose.yml", 
+          "target": "~/"
+        },
+         {
+          "file": "Makefile", 
+          "target": "~/"
+        }
+      ] 
+    },
+  
+    "steps": [
+      {
+        "title": "Step 1 Review Python Script",
+        "text": "step1.md"
+        
+      },
+      {
+        "title": "Step 2 Dockerize",
+        "text": "step2.md",
+        "answer": "step2-answer.md"
+      },
+      {
+        "title": "Step 3 Docker-Compose",
+        "text": "step3.md",
+        "answer": "step3-answer.md"
+      },
+      {
+        "title": "Step 4 Makefile",
+        "text": "step4.md",
+        "answer": "step4-answer.md"
+        
+      }
+    ],
+    "intro": {
+      "text": "intro.md"
+     
+    },
+    "finish": {
+      "text": "finish.md"
+    }
+  },
+  "environment": {
+    "uilayout": "editor-terminal",
+    "uieditorpath": "/root",
+    "hideHiddenFiles": "true"
+  },
+  "backend": {
+    "imageid": "ubuntu1904"
+  }
+}
