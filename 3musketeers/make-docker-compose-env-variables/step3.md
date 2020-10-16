@@ -1,1 +1,0 @@
-After we modify the .env file, lets open up the docker-compose.yml file. Under the "musketeers" service, we see a section for `env_file`. This is the file we are going to pass to docker-compose. 

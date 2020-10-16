@@ -1,1 +1,0 @@
-Congrats!! You have finished the course! Good luck on your adventures with the 3musketeers patterns!!!

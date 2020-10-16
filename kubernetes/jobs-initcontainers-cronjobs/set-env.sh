@@ -1,2 +1,0 @@
-mkdir /manifests
-launch.sh

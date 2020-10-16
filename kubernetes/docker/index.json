@@ -1,0 +1,61 @@
+{
+  "pathwayTitle": "The Container Workshop",
+  "title": "Container Basics",
+  "icon": "fa-docker",
+  "description": "How to build an app using containers",
+  "difficulty": "Basic",
+  "time": "30 minutes",
+  "environment": {
+      "showdashboard": false,
+      "dashboard": "Containerized Node.js app (port 9898)",
+      "uilayout": "editor-terminal-v1",
+      "uisettings": "dockerfile",
+      "uieditorpath": "/root/scenario",
+      "uimessage1": "\u001b[32mYour Interactive Bash Terminal. A safe place to learn and execute commands.\u001b[m\r\n",
+      "uidependencies": [
+        "/socket.io/socket.io.js",
+        "/javascripts/term.js",
+        "/js/vendor/ace/ace.js",
+        "/js/editor.js",
+        "/javascripts/terminal-application.js",
+        "/javascripts/editor-terminal-application.js",
+        "/javascripts/sync-editor-to-container.js"
+      ]
+  },
+  "files": [
+    "Dockerfile"
+  ],
+  "backend": {
+    "trainingid": "openshift-middleware-3-7",
+    "imageid": "docker-direct",
+    "port": 8080
+  },
+  "details": {
+    "intro": {
+        "text": "intro.md",
+        "courseData": "background-init.sh",
+        "code": "foreground-init.sh"
+    },
+    "steps": [
+        {
+          "title": "Understanding the Dockerfile",
+          "text": "1dockerfile.md"
+        },
+        {
+          "title": "Building a container image",
+          "text": "2dockerbuild.md"
+        },
+        {
+          "title": "Running a container",
+          "text": "3dockerrun.md"
+        },
+        {
+          "title": "Using a container registry",
+          "text": "4registry.md"
+        }
+    ],
+    "finish": {
+      "text": "finish.md"
+    }
+  }
+}
